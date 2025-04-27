@@ -13,7 +13,22 @@ import {useState, useEffect} from 'react';
 function App() {
   return (
     <div className="App">
-
+      <Header />
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+         <Home />
+        </Route>
+        <Route exact path="/post">
+          <NewPost />
+        </Route>
+        <Route path="/post/:id">
+         <PostPage />
+        </Route>
+        <Route path="/about" component={About} />
+        <Route path="*" component={Missing} />
+      </Switch>
+      <Footer />
     </div>
   );
 }

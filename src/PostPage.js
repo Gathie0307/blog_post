@@ -2,12 +2,10 @@ import React from 'react'
 
 const PostPage = () => {
   return (
-    <PostPage>
+    <main>
         <h1>PostPage</h1>
-    </PostPage>
+    </main>
   )
 }
 
 export default PostPage
-
-
