@@ -1,10 +1,19 @@
 import React from 'react'
+import { useParams,  Link} from 'react-router-dom'
 
-const PostPage = () => {
+const PostPage = ({ posts, handleDelete }) => {
+  const { id } = useParams();
+  const post = posts.find(post => (post.id).toString() === id)
   return (
-    <>
-        <h1>PostPage</h1>
-    </>
+    <main className='PostPage'>
+      <article className='post'>
+        {post &&
+        <>
+          <h2>{post.title}</h2>
+          <p className='postDate'></p>
+        </>}
+      </article>
+    </main>
   )
 }
 
